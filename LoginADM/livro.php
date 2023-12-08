@@ -3,7 +3,7 @@ require_once '../Config/config.php';
 require_once 'App/Controller/LivroController.php';
 
 if (isset($_FILES['imagem']) && !empty($_FILES['imagem'])) {
-    $imagem = "./uploads" . $_FILES['imagem']['name'];
+    $imagem = "../uploads" . $_FILES['imagem']['name'];
     move_uploaded_file($_FILES['imagem']['tmp_name'], $imagem);
 } else {
     $imagem = "";
